@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Quiz</string>
+    <string name="MC_question1">Pick all that apply....</string>
 </resources>
