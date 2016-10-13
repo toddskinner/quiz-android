@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int score = 0;
-    String question1Answer;
+    String question1Answer = "";
 
     //Remember to set answer to Q1 here
     String answerToQ1 = "Todd";
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void checkAnswers()
     {
-        //fix
+        
 
         if(question1Answer.equals(answerToQ1));
         {
