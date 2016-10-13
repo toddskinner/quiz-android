@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Android Quiz</string>
+    <string name="app_name">Quiz</string>
     <string name="multipleChoice_question1">Pick all that apply....</string>
     <string name="trueFalse_question1">True or False?....</string>
     <string name="checkBox_question1">Check all that apply....</string>
