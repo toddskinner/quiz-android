@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Android Quiz</string>
-    <string name="MC_question1">Pick all that apply....</string>
-    <string name="TF_question1">True or False?....</string>
-    <string name="CB_question1">Check all that apply....</string>
-    <string name="CB_answer1">answer....</string>
-    <string name="CB_answer2">answer....</string>
-    <string name="CB_answer3">answer....</string>
-    <string name="CB_answer4">answer....</string>
-    <string name="ET_question1">What is....</string>
+    <string name="multipleChoice_question1">Pick all that apply....</string>
+    <string name="trueFalse_question1">True or False?....</string>
+    <string name="checkBox_question1">Check all that apply....</string>
+    <string name="checkBox_answer1">answer....</string>
+    <string name="checkBox_answer2">answer....</string>
+    <string name="checkBox_answer3">answer....</string>
+    <string name="checkBox_answer4">answer....</string>
+    <string name="editText_question1">What is....</string>
+    <string name="submit_answers">Submit</string>
 </resources>

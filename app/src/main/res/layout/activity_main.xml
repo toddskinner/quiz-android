@@ -32,13 +32,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ET_question1" />
+                android:text="@string/editText_question1" />
 
             <EditText
-                android:id="@+id/name_editText"
+                android:id="@+id/answer_editText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
+                android:backgroundTint="@color/grey"
                 android:layout_marginBottom="16dp"/>
 
         </LinearLayout>
@@ -54,26 +55,26 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/MC_question1" />
+                android:text="@string/multipleChoice_question1" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:id="@+id/answer1"
+                    android:id="@+id/question2_answer1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Test1" />
 
                 <RadioButton
-                    android:id="@+id/answer2"
+                    android:id="@+id/question2_answer2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Test2" />
 
                 <RadioButton
-                    android:id="@+id/answer3"
+                    android:id="@+id/question2_answer3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Test3" />
@@ -93,20 +94,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/TF_question1" />
+                android:text="@string/trueFalse_question1" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:id="@+id/true1"
+                    android:id="@+id/question3_true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="True" />
 
                 <RadioButton
-                    android:id="@+id/false1"
+                    android:id="@+id/question3_false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="False" />
@@ -126,29 +127,42 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/CB_question1" />
+                android:text="@string/checkBox_question1" />
 
             <CheckBox
+                android:id="@+id/question4_answer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/CB_answer1"/>
+                android:text="@string/checkBox_answer1"/>
 
             <CheckBox
+                android:id="@+id/question4_answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/CB_answer2"/>
+                android:text="@string/checkBox_answer2"/>
 
             <CheckBox
+                android:id="@+id/question4_answer3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/CB_answer3"/>
+                android:text="@string/checkBox_answer3"/>
 
             <CheckBox
+                android:id="@+id/question4_answer4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/CB_answer4"/>
+                android:text="@string/checkBox_answer4"/>
 
         </LinearLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:text="@string/submit_answers"
+            android:textAllCaps="true"
+            android:onClick="submitOrder"/>
 
     </LinearLayout>
 

@@ -6,4 +6,6 @@
     <color name="light_grey">#EEEEEE</color>
     <color name="trans_blue">#C5CAE9</color>
     <color name="border_color">#9FA8DA</color>
+    <color name="grey">#757575</color>
+    <color name="black">#000000</color>
 </resources>
