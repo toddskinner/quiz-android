@@ -6,15 +6,34 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    int score = 0;
+    String question1Answer;
+    String answerToQ1 = "TODD";
+
+    //booleans for Q2
+    boolean q2A1IsSelected;
+    boolean q2A2IsSelected;
+    boolean q2A3IsSelected;
+
+    //booleans for Q3
+    boolean q3TrueIsSelected;
+    boolean q3FalseIsSelected;
+
+    //booleans for Q4
+    boolean q4A1IsChecked;
+    boolean q4A2IsChecked;
+    boolean q4A3IsChecked;
+    boolean q4A4IsChecked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
 
     public void submitOrder(View view) {
 
@@ -29,17 +48,17 @@ public class MainActivity extends AppCompatActivity {
         RadioButton question2Answer2 = (RadioButton) findViewById(R.id.question2_answer2);
         RadioButton question2Answer3 = (RadioButton) findViewById(R.id.question2_answer3);
 
-        boolean q2A1IsSelected = question2Answer1.isChecked();
-        boolean q2A2IsSelected = question2Answer2.isChecked();
-        boolean q2A3IsSelected = question2Answer3.isChecked();
+        q2A1IsSelected = question2Answer1.isChecked();
+        q2A2IsSelected = question2Answer2.isChecked();
+        q2A3IsSelected = question2Answer3.isChecked();
 
         //Set variables and booleans for the answers to Question #3
 
         RadioButton question3True = (RadioButton) findViewById(R.id.question3_true);
         RadioButton question3False = (RadioButton) findViewById(R.id.question3_false);
 
-        boolean q3TrueIsSelected = question3True.isChecked();
-        boolean q3FalseIsSelected = question3False.isChecked();
+        q3TrueIsSelected = question3True.isChecked();
+        q3FalseIsSelected = question3False.isChecked();
 
         //Set variables and booleans for the answers to Question #4
 
@@ -48,10 +67,34 @@ public class MainActivity extends AppCompatActivity {
         CheckBox question4Answer3 = (CheckBox) findViewById(R.id.question4_answer3);
         CheckBox question4Answer4 = (CheckBox) findViewById(R.id.question4_answer4);
 
-        boolean q4A1IsChecked = question4Answer1.isChecked();
-        boolean q4A2IsChecked = question4Answer2.isChecked();
-        boolean q4A3IsChecked = question4Answer3.isChecked();
-        boolean q4A4IsChecked = question4Answer4.isChecked();
+        q4A1IsChecked = question4Answer1.isChecked();
+        q4A2IsChecked = question4Answer2.isChecked();
+        q4A3IsChecked = question4Answer3.isChecked();
+        q4A4IsChecked = question4Answer4.isChecked();
 
+        checkAnswers();
+    }
+
+    public void checkAnswers()
+    {
+        String toastMessage = "" + score + " out of 4 answers correct";
+
+        if(question1Answer == answerToQ1)
+        {
+            score = score + 1;
+        }
+        if(q2A3IsSelected)
+        {
+            score = score + 1;
+        }
+        if(q3FalseIsSelected)
+        {
+            score = score + 1;
+        }
+        if(q4A2IsChecked && q4A3IsChecked)
+        {
+            score = score + 1;
+        }
+        Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show();
     }
 }
