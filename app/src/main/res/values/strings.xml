@@ -9,4 +9,5 @@
     <string name="checkBox_answer4">answer....</string>
     <string name="editText_question1">What is....</string>
     <string name="submit_answers">Submit</string>
+    <string name="reset">Reset</string>
 </resources>

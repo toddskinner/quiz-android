@@ -73,6 +73,8 @@
                     android:layout_height="wrap_content"
                     android:text="Test2" />
 
+                <!-- Correct answer below -->
+
                 <RadioButton
                     android:id="@+id/question2_answer3"
                     android:layout_width="wrap_content"
@@ -106,6 +108,8 @@
                     android:layout_height="wrap_content"
                     android:text="True" />
 
+                <!-- Correct answer below -->
+
                 <RadioButton
                     android:id="@+id/question3_false"
                     android:layout_width="wrap_content"
@@ -135,11 +139,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/checkBox_answer1"/>
 
+            <!-- Correct answer below (1 of 2) -->
+
             <CheckBox
                 android:id="@+id/question4_answer2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/checkBox_answer2"/>
+
+            <!-- Correct answer below (2 of 2) -->
 
             <CheckBox
                 android:id="@+id/question4_answer3"
@@ -155,15 +163,38 @@
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="150dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="16dp"
-            android:layout_gravity="center"
-            android:text="@string/submit_answers"
-            android:textAllCaps="true"
-            android:onClick="submitOrder"/>
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                android:text="@string/submit_answers"
+                android:textAllCaps="true"
+                android:onClick="submitOrder"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                android:text="@string/reset"
+                android:textAllCaps="true"
+                android:onClick="resetAnswers"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

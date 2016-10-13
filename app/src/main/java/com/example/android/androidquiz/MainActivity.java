@@ -12,7 +12,9 @@ public class MainActivity extends AppCompatActivity {
 
     int score = 0;
     String question1Answer;
-    String answerToQ1 = "TODD";
+
+    //Remember to set answer to Q1 here
+    String answerToQ1 = "Todd";
 
     //booleans for Q2
     boolean q2A1IsSelected;
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         //Set variables for the answers to Question #1
 
         TextView answerText = (TextView) findViewById(R.id.answer_editText);
-        String question1Answer = answerText.getText().toString().toUpperCase();
+        String question1Answer = answerText.getText().toString();
 
         //Set variables and booleans for the answers to Question #2
 
@@ -77,9 +79,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void checkAnswers()
     {
-        String toastMessage = "" + score + " out of 4 answers correct";
+        //fix
 
-        if(question1Answer == answerToQ1)
+        if(question1Answer.equals(answerToQ1));
         {
             score = score + 1;
         }
@@ -95,6 +97,60 @@ public class MainActivity extends AppCompatActivity {
         {
             score = score + 1;
         }
+        String toastMessage = "" + score + " out of 4 answers correct";
         Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show();
+    }
+
+    public void resetAnswers(View view)
+    {
+        score = 0;
+
+        //Question 1
+        TextView answerText = (TextView) findViewById(R.id.answer_editText);
+        answerText.setText("");
+        question1Answer = "";
+
+        //Question 2
+
+        RadioButton question2Answer1 = (RadioButton) findViewById(R.id.question2_answer1);
+        RadioButton question2Answer2 = (RadioButton) findViewById(R.id.question2_answer2);
+        RadioButton question2Answer3 = (RadioButton) findViewById(R.id.question2_answer3);
+
+        question2Answer1.setChecked(false);
+        question2Answer2.setChecked(false);
+        question2Answer3.setChecked(false);
+
+        q2A1IsSelected = false;
+        q2A2IsSelected = false;
+        q2A3IsSelected = false;
+
+        //Question 3
+
+        RadioButton question3True = (RadioButton) findViewById(R.id.question3_true);
+        RadioButton question3False = (RadioButton) findViewById(R.id.question3_false);
+
+        question3True.setChecked(false);
+        question3False.setChecked(false);
+
+        q3TrueIsSelected = false;
+        q3FalseIsSelected = false;
+
+        //Question 4
+
+        CheckBox question4Answer1 = (CheckBox) findViewById(R.id.question4_answer1);
+        CheckBox question4Answer2 = (CheckBox) findViewById(R.id.question4_answer2);
+        CheckBox question4Answer3 = (CheckBox) findViewById(R.id.question4_answer3);
+        CheckBox question4Answer4 = (CheckBox) findViewById(R.id.question4_answer4);
+
+        question4Answer1.setChecked(false);
+        question4Answer2.setChecked(false);
+        question4Answer3.setChecked(false);
+        question4Answer4.setChecked(false);
+
+        q4A1IsChecked = false;
+        q4A2IsChecked = false;
+        q4A3IsChecked = false;
+        q4A4IsChecked = false;
+
     }
 }
