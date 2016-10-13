@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     String question1Answer = "";
 
     //Remember to set answer to Q1 here
-    String answerToQ1 = "Todd";
+    String answerToQ1 = "Greenland";
 
     //booleans for Q2
     boolean q2A1IsSelected;
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         {
             score = score + 1;
         }
-        if(q4A2IsChecked && q4A3IsChecked && !q4A1IsChecked && !q4A4IsChecked)
+        if(!q4A2IsChecked && q4A3IsChecked && q4A1IsChecked && q4A4IsChecked)
         {
             score = score + 1;
         }

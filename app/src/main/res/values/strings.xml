@@ -1,13 +1,18 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Quiz</string>
-    <string name="multipleChoice_question1">Pick all that apply....</string>
-    <string name="trueFalse_question1">True or False?....</string>
-    <string name="checkBox_question1">Check all that apply....</string>
-    <string name="checkBox_answer1">answer....</string>
-    <string name="checkBox_answer2">answer....</string>
-    <string name="checkBox_answer3">answer....</string>
-    <string name="checkBox_answer4">answer....</string>
-    <string name="editText_question1">What is....</string>
+    <string name="app_name">World Traveler Quiz</string>
+    <string name="radio_question">What is the diameter of Earth?</string>
+    <string name="radio_answer1">6,500 miles</string>
+    <string name="radio_answer2">7,250 miles</string>
+    <string name="radio_answer3">8,000 miles</string>
+    <string name="trueFalse_question1">True or False? California has the longest shoreline of any U.S. state.</string>
+    <string name="checkBox_question1">Which 3 British cities have underground rail systems?</string>
+    <string name="checkBox_answer1">London</string>
+    <string name="checkBox_answer2">Manchester</string>
+    <string name="checkBox_answer3">Liverpool</string>
+    <string name="checkBox_answer4">Newcastle</string>
+    <string name="editText_question1">Name the world\'s biggest island.</string>
     <string name="submit_answers">Submit</string>
     <string name="reset">Reset</string>
+    <string name="answer_true">True</string>
+    <string name="answer_false">False</string>
 </resources>
