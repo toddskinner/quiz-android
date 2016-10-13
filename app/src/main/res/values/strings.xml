@@ -4,7 +4,7 @@
     <string name="radio_answer1">6,500 miles</string>
     <string name="radio_answer2">7,250 miles</string>
     <string name="radio_answer3">8,000 miles</string>
-    <string name="trueFalse_question1">True or False? California has the longest shoreline of any U.S. state.</string>
+    <string name="trueFalse_question1">True or False?\nCalifornia has the longest shoreline of any U.S. state.</string>
     <string name="checkBox_question1">Which 3 British cities have underground rail systems?</string>
     <string name="checkBox_answer1">London</string>
     <string name="checkBox_answer2">Manchester</string>
