@@ -5,18 +5,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     int score = 0;
-    String question1Answer = "";
 
     //Remember to set answer to Q1 here
-    String answerToQ1 = "Greenland";
+    String answerToQ1 = "GREENLAND";
 
     //booleans for Q2
     boolean q2A1IsSelected;
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         //Set variables for the answers to Question #1
 
         TextView answerText = (TextView) findViewById(R.id.answer_editText);
-        String question1Answer = answerText.getText().toString();
+        String question1Answer = answerText.getText().toString().toUpperCase();
 
         //Set variables and booleans for the answers to Question #2
 
@@ -79,13 +81,12 @@ public class MainActivity extends AppCompatActivity {
         q4A3IsChecked = question4Answer3.isChecked();
         q4A4IsChecked = question4Answer4.isChecked();
 
-        checkAnswers();
+        checkAnswers(question1Answer);
     }
 
-    public void checkAnswers()
+    public void checkAnswers(String question1Answer)
     {
-
-        if(question1Answer.equals(answerToQ1));   //why does Android Studio say the "if statement has an empty body"?
+        if(question1Answer.equals(answerToQ1))
         {
             score = score + 1;
         }
@@ -113,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
         //Question 1
         TextView answerText = (TextView) findViewById(R.id.answer_editText);
         answerText.setText("");
-        question1Answer = "";
 
         //Question 2
 
